@@ -29,10 +29,10 @@ namespace jackPerformanceCollector
 
         private void timer_tick(ThreadPoolTimer timer)
         {
-            var jsonMessage = string.Format("{{ displayname:null, location:\"Korea\", organization:\"MDS\", guid: \"41c2e437-6c3d-48d0-8e12-81eab2aa5013\", timecreated: \"{0}\", measurename: \"CPU\", unitofmeasure: \"%\", value:{1}}}", DateTime.UtcNow.ToString("o"), getCpuPerformance().ToString());
+            var jsonMessage = string.Format("{{ displayname:null, location:\"Korea\", organization:\"Company\", guid: \"41c2e437-6c3d-48d0-8e12-81eab2aa5013\", timecreated: \"{0}\", measurename: \"CPU\", unitofmeasure: \"%\", value:{1}}}", DateTime.UtcNow.ToString("o"), getCpuPerformance().ToString());
             this.SendMessage(jsonMessage);
 
-            jsonMessage = string.Format("{{ displayname:null, location:\"Korea\", organization:\"MDS\", guid: \"41c2e437-6c3d-48d0-8e12-81eab2aa5013\", timecreated: \"{0}\", measurename: \"Memory\", unitofmeasure: \"%\", value:{1}}}", DateTime.UtcNow.ToString("o"), getMemoryPerformance().ToString());
+            jsonMessage = string.Format("{{ displayname:null, location:\"Korea\", organization:\"Company\", guid: \"41c2e437-6c3d-48d0-8e12-81eab2aa5013\", timecreated: \"{0}\", measurename: \"Memory\", unitofmeasure: \"%\", value:{1}}}", DateTime.UtcNow.ToString("o"), getMemoryPerformance().ToString());
             this.SendMessage(jsonMessage);
         }
 
